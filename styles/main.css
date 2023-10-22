@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Pocket Monk';
+    src: url('fonts/Pocket Monk.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Pokemon GB';
+    src: url('fonts/Pokemon GB.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Pokemon GB Japan HR';
+    src: url('fonts/Pokemon GB Japan HR.ttf') format('truetype');
+}
+
+/* Reset enkele default stijlen */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Pokemon GB', sans-serif;  /* standaard font voor de body */
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 {
+    font-family: 'Pocket Monk', cursive;  /* speciaal font voor headers */
+    font-size: 2.5em;
+    background-color: #333;
+    color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.japanese-text {
+    font-family: 'Pokemon GB Japan HR', sans-serif; /* speciaal font voor Japanse teksten */
+    font-size: 1.2em;
+}
+
+/* Je kunt gelijkaardige classes toevoegen voor de andere Japanse fonts als je ze op andere plaatsen wilt gebruiken. */
+
