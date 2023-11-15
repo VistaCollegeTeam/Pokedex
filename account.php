@@ -1,20 +1,20 @@
 <?php
 include 'config.php';
 session_start();
-if(!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['user_id'])) {
     header('Location: index.php');
     exit;
 }
 
 $message = '';
 
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if(isset($_POST['change_email'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (isset($_POST['change_email'])) {
         $new_email = $_POST['new_email'];
         $stmt = $pdo->prepare('UPDATE users SET email = ? WHERE id = ?');
         $stmt->execute([$new_email, $_SESSION['user_id']]);
         $message = 'Email updated successfully!';
-    } elseif(isset($_POST['change_password'])) {
+    } elseif (isset($_POST['change_password'])) {
         $new_password = password_hash($_POST['new_password'], PASSWORD_DEFAULT);
         $stmt = $pdo->prepare('UPDATE users SET password = ? WHERE id = ?');
         $stmt->execute([$new_password, $_SESSION['user_id']]);
@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     <div class="menu">
         <a href="dashboard.php">Dashboard</a>
         <a href="account.php">Account</a>
-        <?php if(isset($_SESSION['user_id'])): ?>
+        <?php if (isset($_SESSION['user_id'])): ?>
             <a href="logout.php">Logout</a>
         <?php endif; ?>
     </div>

@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost'; #host
+$host = 'localhost';
 $db   = 'pokedex_db';
-$user = 'root'; #username
-$pass = ''; #password
+$user = 'root';
+$pass = ''; #enter your password
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
